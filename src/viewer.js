@@ -4,6 +4,7 @@ import {
   AxesHelper,
   Box3,
   Cache,
+  Color,
   CubeTextureLoader,
   DirectionalLight,
   GridHelper,
@@ -17,6 +18,9 @@ import {
   Scene,
   SkeletonHelper,
   UnsignedByteType,
+  SphereGeometry,
+  MeshBasicMaterial,
+  Mesh,
   Vector3,
   WebGLRenderer,
   sRGBEncoding,
@@ -26,6 +30,14 @@ import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader.js';
 import { DRACOLoader } from 'three/examples/jsm/loaders/DRACOLoader.js';
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js';
 import { RGBELoader } from 'three/examples/jsm/loaders/RGBELoader.js';
+import requests;
+from requests_ntlm import HttpNtlmAuth;
+//import { SphereGeometry } from 'three/build/three.min.js';
+//import { MeshBasicMaterial } from 'three/build/three.min.js';
+//import { Mesh } from 'three/build/three.min.js';
+//import { Vector3 } from 'three/build/three.min.js';
+
+
 // import { RoughnessMipmapper } from 'three/examples/jsm/utils/RoughnessMipmapper.js';
 
 import { GUI } from 'dat.gui';
@@ -50,9 +62,12 @@ const MAP_NAMES = [
   'specularMap',
 ];
 
+
 const Preset = {ASSET_GENERATOR: 'assetgenerator'};
 
 Cache.enabled = true;
+var material2;
+var geometry2;
 
 export class Viewer {
 
@@ -87,7 +102,9 @@ export class Viewer {
       directIntensity: 0.8 * Math.PI, // TODO(#116)
       directColor: 0xFFFFFF,
       bgColor1: '#ffffff',
-      bgColor2: '#353535'
+      bgColor2: '#353535',
+      //Parameter Selection
+      Parameter: 'Temperature'
     };
 
     this.prevTime = 0;
@@ -147,6 +164,100 @@ export class Viewer {
     this.animate = this.animate.bind(this);
     requestAnimationFrame( this.animate );
     window.addEventListener('resize', this.resize.bind(this), false);
+
+    //Add Sphere
+    this.geometry = new SphereGeometry( 2, 32, 32 );
+    this.material = new MeshBasicMaterial( {color: 0xff00ff} );
+
+    //geometry2 = new SphereGeometry(2,32,32);
+    material2 = new MeshBasicMaterial( {color: 0xff0019} );
+
+    this.sensor1 = new Mesh( this.geometry, material2 );
+    this.sensor2 = new Mesh( this.geometry, this.material );
+    this.sensor3 = new Mesh( this.geometry, this.material );
+    this.sensor4 = new Mesh( this.geometry, this.material );
+    this.sensor5 = new Mesh( this.geometry, this.material );
+    this.sensor6 = new Mesh( this.geometry, this.material );
+    this.sensor7 = new Mesh( this.geometry, this.material );
+    this.sensor8 = new Mesh( this.geometry, this.material );
+    this.sensor9 = new Mesh( this.geometry, this.material );
+    this.sensor10 = new Mesh( this.geometry, this.material );
+    this.sensor11 = new Mesh( this.geometry, this.material );
+    this.sensor12 = new Mesh( this.geometry, this.material );
+    this.sensor13 = new Mesh( this.geometry, this.material );
+    this.sensor14 = new Mesh( this.geometry, this.material );
+    this.sensor15 = new Mesh( this.geometry, this.material );
+    this.sensor16 = new Mesh( this.geometry, this.material );
+    this.sensor17 = new Mesh( this.geometry, this.material );
+    this.sensor18 = new Mesh( this.geometry, this.material );
+    this.sensor19 = new Mesh( this.geometry, this.material );
+    this.sensor20 = new Mesh( this.geometry, this.material );
+
+
+    //Freeway side
+    this.sensor1location = new Vector3(-73,-15,125);
+    this.sensor1.position.copy(this.sensor1location);
+    this.sensor2location = new Vector3(-73,-5,125);
+    this.sensor2.position.copy(this.sensor2location);
+    this.sensor3location = new Vector3(-73,-15,130);
+    this.sensor3.position.copy(this.sensor3location);
+    this.sensor4location = new Vector3(-73,-5,130);
+    this.sensor4.position.copy(this.sensor4location);
+    this.sensor5location = new Vector3(-73,-15,136);
+    this.sensor5.position.copy(this.sensor5location);
+    this.sensor6location = new Vector3(-73,-5,136);
+    this.sensor6.position.copy(this.sensor6location);
+    this.sensor7location = new Vector3(-73,-15,142);
+    this.sensor7.position.copy(this.sensor7location);
+    this.sensor8location = new Vector3(-73,-5,142);
+    this.sensor8.position.copy(this.sensor8location);
+    this.sensor9location = new Vector3(-73,-15,147);
+    this.sensor9.position.copy(this.sensor9location);
+    this.sensor10location = new Vector3(-73,-5,147);
+    this.sensor10.position.copy(this.sensor10location);
+    //winery side
+    this.sensor11location = new Vector3(-60,-15,125);//(A,B,C)
+    this.sensor11.position.copy(this.sensor11location);
+    this.sensor12location = new Vector3(-60,-5,125);
+    this.sensor12.position.copy(this.sensor12location);
+    this.sensor13location = new Vector3(-60,-15,130);//(A,B,C)
+    this.sensor13.position.copy(this.sensor13location);
+    this.sensor14location = new Vector3(-60,-5,130);
+    this.sensor14.position.copy(this.sensor14location);
+    this.sensor15location = new Vector3(-60,-15,136);//(A,B,C)
+    this.sensor15.position.copy(this.sensor15location);
+    this.sensor16location = new Vector3(-60,-5,136);
+    this.sensor16.position.copy(this.sensor16location);
+    this.sensor17location = new Vector3(-60,-15,142);//(A,B,C)
+    this.sensor17.position.copy(this.sensor17location);
+    this.sensor18location = new Vector3(-60,-5,142);
+    this.sensor18.position.copy(this.sensor18location);
+    this.sensor19location = new Vector3(-57,-15,147);//(A,B,C)
+    this.sensor19.position.copy(this.sensor19location);
+    this.sensor20location = new Vector3(-57,-5,147);
+    this.sensor20.position.copy(this.sensor20location);
+
+
+    this.scene.add( this.sensor1 );
+    this.scene.add( this.sensor2 );
+    this.scene.add( this.sensor3 );
+    this.scene.add( this.sensor4 );
+    this.scene.add( this.sensor5 );
+    this.scene.add( this.sensor6 );
+    this.scene.add( this.sensor7 );
+    this.scene.add( this.sensor8 );
+    this.scene.add( this.sensor9 );
+    this.scene.add( this.sensor10 );
+    this.scene.add( this.sensor11 );
+    this.scene.add( this.sensor12 );
+    this.scene.add( this.sensor13 );
+    this.scene.add( this.sensor14 );
+    this.scene.add( this.sensor15 );
+    this.scene.add( this.sensor16 );
+    this.scene.add( this.sensor17 );
+    this.scene.add( this.sensor18 );
+    this.scene.add( this.sensor19 );
+    this.scene.add( this.sensor20 );
   }
 
   animate (time) {
@@ -592,6 +703,7 @@ export class Viewer {
       lightFolder.addColor(this.state, 'directColor')
     ].forEach((ctrl) => ctrl.onChange(() => this.updateLights()));
 
+
     // Animation controls.
     this.animFolder = gui.addFolder('Animation');
     this.animFolder.domElement.style.display = 'none';
@@ -616,6 +728,31 @@ export class Viewer {
     perfLi.appendChild(this.stats.dom);
     perfLi.classList.add('gui-stats');
     perfFolder.__ul.appendChild( perfLi );
+
+    //Paramater Control
+    const parameterFolder = gui.addFolder('Parameter');
+    //const parameterCtrl = parameterFolder.add(this.state, 'Parameter', ['Temperature', 'Humidity','CO2']);
+    const parameterCtrl = parameterFolder.add(this.state, 'Parameter', ['Temperature', 'Humidity', 'CO2']);
+    parameterCtrl.onChange(() => this.updateTextureEncoding());//Change to update parameter
+    var options = {
+      NOW: function(){
+        alert("Getting Data");
+        material2.color.setHex( 0xffffff );
+        //const Http = new XMLHttpRequest();
+        const url='https://winery.ucdavis.edu/piwebapi/streams/F1DPbXEfV8tzIE6grv9YPK1rjgAg8AAAVkVOLVNSVi1QSTJcMTIwOF9IVU1JRElUWQ/recorded?startTime=*-1d&endTime=*&boundaryType=Inside&maxCount=150000'//'https://jsonplaceholder.typicode.com/posts';
+        //Http.open("GET", url,true,'jamesjn@ucdavis.edu','hollandzeus341!');
+        //Http.withCredentials = true;
+        //Http.send();
+        resp = requests.get(str(url),verify = True, auth = HttpNtlmAuth("jjnel@ucdavis.edu","hollandzeus341!"));
+        console.log(resp);
+        //Http.onreadystatechange = (e) => {
+          //console.log(Http.responseText)
+        //}
+        //this.scene.add( this.sensor1 );
+      }
+    };
+    gui.add(options,'NOW');
+
 
     const guiWrap = document.createElement('div');
     this.el.appendChild( guiWrap );

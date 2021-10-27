@@ -1,15 +1,11 @@
 ---
-title: "Paper Title Number 3"
+title: "Wireless Sensor Network with Mesh Topology for Carbon Dioxide Monitoring in a Winery"
 collection: publications
 permalink: /publication/2015-10-01-paper-title-number-3
-excerpt: 'This paper is about the number 3. The number 4 is left for future work.'
-date: 2015-10-01
-venue: 'Journal 1'
-paperurl: 'http://academicpages.github.io/files/paper3.pdf'
-citation: 'Your Name, You. (2015). &quot;Paper Title Number 3.&quot; <i>Journal 1</i>. 1(3).'
+excerpt: 'Existing CO2 monitoring devices for wineries typically consist of a single sensor mounted on the wall, providing only a point measurement, however, the spatial dependency of CO2 lends itself to a multi-sensor system...'
+date: 2021-1-17
+venue: 'IEEE Topical Conference on Wireless Sensors and Sensor Networks (WiSNeT)'
+#paperurl: 'https://ieeexplore.ieee.org/document/9413797'
+citation: 'J. Nelson et al., "Wireless Sensor Network with Mesh Topology for Carbon Dioxide Monitoring in a Winery," 2021 IEEE Topical Conference on Wireless Sensors and Sensor Networks (WiSNeT), 2021, pp. 30-33, doi: 10.1109/WiSNeT51848.2021.9413797.'
 ---
-This paper is about the number 3. The number 4 is left for future work.
-
-[Download paper here](http://academicpages.github.io/files/paper3.pdf)
-
-Recommended citation: Your Name, You. (2015). "Paper Title Number 3." <i>Journal 1</i>. 1(3).
+During fermentation of juice to wine, the conversion of sugar to alcohol produces carbon dioxide (CO2). For a single liter of juice that is fermented, approximately 64 liters of pure CO2 is produced. The OSHA permissible exposure limit of CO2 is 5000 ppm for 8 hours of exposure, approximately 10 times the CO2 content of the atmosphere. It would take 200 liters of fresh air to dilute a single liter of pure CO2 to permissible level. Considering a typical fermentation tank can hold approximately 5000 liters of juice and a winery will ferment in many tanks at the same time, the levels of CO2 produced poses a significant safety hazard and must be controlled. Since CO2 is denser than air, a vertical separation will exist, in addition to the inherent variability in CO2 emission and distribution across a floor plan. Existing CO2 monitoring devices for wineries typically consist of a single sensor mounted on the wall, providing only a point measurement, however, the spatial dependency of CO2 lends itself to a multi-sensor system. A wireless sensor network system for CO2 and environmental monitoring in a winery and creamery was shown by Madrid et al. 2017 [1]. This work demonstrated the need for a multi-point sensor network by showing that a sensor network recorded CO2 levels near the permissible exposure limit of 5000 ppm, despite an existing CO2 point measurement system that controls exhaust fans in a winery fermentation room. The system utilized IEEE 802.15.4 communication protocol over 2.4 GHz to form a star network, however, multiple star networks were needed to provide coverage for a large facility with many RF obstructions. In some cases, a Yagi directional antenna was used on the central node to reach edge nodes far away. Our work addresses the problem of RF connectivity by implementing a mesh network, allowing data to be routed through multiple pathways between nodes.

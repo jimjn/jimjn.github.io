@@ -1,0 +1,57 @@
+---
+title: 'Environmental Monitoring of a Winery Environment'
+date: 2021-08-14
+permalink: /posts/2021/08/Environmental_Monitoring
+tags:
+  - Wireless sensor networks
+  - Environmental monitoring
+  - Real-time data
+---
+
+<img src='/images/Environmental_Monitoring/table_sensors.jpg'>
+<section>
+            <h2>Introduction</h2>
+            <p>
+                As a product of ethanol fermentation, carbon dioxide (CO2) is released from fermentator into the environment.
+                The OSHA permissible exposure limit is 5000 ppm for 8 hours of exposure, approximately 10 times
+                the CO2 content of the atmosphere.  For every liter of juice fermentated, approximately
+                64 liters of pure CO2 is produced.  The CO2 in the evnronment of the winery can be controlled in
+                the following ways:
+
+                  <ol>
+                    <li>Vent CO2 to outside the building</li>
+                    The CO2 can be prevented from entering the indoor environment in the first place
+                    and can be collected as it is produced and vented outside the building.  While
+                    this method will prevent CO2 building inside the building, a better method would be
+                    to...
+                    <li>Caputure and sequester the CO2</li>
+                    The CO2 produced from wine fermentation is ideal for sequestration as it is a) produced
+                    in an enclosed space and thus easy to capture and b) highly pure.
+                    <li>Bring in outside air to dilute inside air to safe levels</li>
+                    This is the least ideal solution.  Wine fermentation is performed in the
+                    hottest months of the year, thus the air being brought inside is warm, and
+                    more energy is required to cool the building
+                  </ol>
+            </p>
+            <h2>Wireless Sensor Network</h2>
+            <p>
+              No matter what methods are taken to mitigate CO2, there is still
+              a need to measure CO2 in the envinronment.  Since CO2 is denser than air,
+              a vertial separation will exist, in addition to the inherent varirability
+              in CO2 emission and distrubution across a floorplan.  Existing CO2 monitoring devices for
+              wineries typically consist of a single sensor mounted on the
+              wall, providing only a point measurement, however, the spatial
+              dependency of CO2 lends itself to a multi-sensor system.  Multiple versions of wireless sensor
+              networks have been developed.  A small snapshot of data is shown below (metric names removed).
+              The data demonstrates the variability across a floorplan, with some locations above the 5000 ppm limit
+              and some locations near the outside CO2 level of 420 ppm.
+            </p>
+            <img src='/images/Environmental_Monitoring/Grafana_Screenshot.JPG'>
+            <h2>References</h2>
+            <p>
+              N. Madrid, R. Boulton and A. Knoesen, "Remote monitoring of winery and creamery environments with a wireless sensor system", Building and Environment, vol. 119, pp. 128-139, 2017.
+            </p>
+            <p>
+              J. Nelson et al., "Wireless Sensor Network with Mesh Topology for Carbon Dioxide Monitoring in a Winery," 2021 IEEE Topical Conference on Wireless Sensors and Sensor Networks (WiSNeT), 2021, pp. 30-33, doi: 10.1109/WiSNeT51848.2021.9413797.
+            </p>
+</section>

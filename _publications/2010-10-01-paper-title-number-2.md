@@ -1,15 +1,11 @@
 ---
-title: "Paper Title Number 2"
+title: "Monitoring Site-Specific Fermentation Outcomes via Oxidation Reduction Potential and UV-Vis Spectroscopy to Characterize “Hidden” Parameters of Pinot Noir Wine Fermentations"
 collection: publications
 permalink: /publication/2010-10-01-paper-title-number-2
-excerpt: 'This paper is about the number 2. The number 3 is left for future work.'
-date: 2010-10-01
-venue: 'Journal 1'
-paperurl: 'http://academicpages.github.io/files/paper2.pdf'
-citation: 'Your Name, You. (2010). &quot;Paper Title Number 2.&quot; <i>Journal 1</i>. 1(2).'
+excerpt: 'Real-time process metrics are standard for the majority of fermentation-based industries but have not been widely adopted by the wine industry. In this study, replicate fermentations were conducted with temperature as the main process parameter and assessed via in-line Oxidation Reduction Potential (ORP) probes and at-line profiling of phenolics compounds by UV-Vis spectroscopy...'
+date: 2021-08-05
+venue: 'Molecules'
+#paperurl: 'https://www.mdpi.com/1420-3049/26/16/4748#cite'
+citation: 'Walker, G.A.; Nelson, J.; Halligan, T.; Lima, M.M.M.; Knoesen, A.; Runnebaum, R.C. Monitoring Site-Specific Fermentation Outcomes via Oxidation Reduction Potential and UV-Vis Spectroscopy to Characterize “Hidden” Parameters of Pinot Noir Wine Fermentations. Molecules 2021, 26, 4748. https://doi.org/10.3390/molecules26164748'
 ---
-This paper is about the number 2. The number 3 is left for future work.
-
-[Download paper here](http://academicpages.github.io/files/paper2.pdf)
-
-Recommended citation: Your Name, You. (2010). "Paper Title Number 2." <i>Journal 1</i>. 1(2).
+Real-time process metrics are standard for the majority of fermentation-based industries but have not been widely adopted by the wine industry. In this study, replicate fermentations were conducted with temperature as the main process parameter and assessed via in-line Oxidation Reduction Potential (ORP) probes and at-line profiling of phenolics compounds by UV-Vis spectroscopy. The California and Oregon vineyards used in this study displayed consistent vinification outcomes over five vintages and are representative of sites producing faster- and slower-fermenting musts. The selected sites have been previously characterized by fermentation kinetics, elemental profile, phenolics, and sensory analysis. ORP probes were integrated into individual fermentors to record how ORP changed throughout the fermentation process. The ORP profiles generally followed expected trends with deviations revealing previously undetectable process differences between sites and replicates. Site-specific differences were also observed in phenolic and anthocyanin extraction. Elemental composition was also analyzed for each vineyard, revealing distinctive profiles that correlated with the fermentation kinetics and may influence the redox status of these wines. The rapid ORP responses observed related to winemaking decisions and yeast activity suggest ORP is a useful process parameter that should be tracked in addition to Brix, temperature, and phenolics extraction for monitoring fermentations.

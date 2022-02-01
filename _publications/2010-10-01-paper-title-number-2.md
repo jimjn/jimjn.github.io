@@ -1,7 +1,7 @@
 ---
 title: "Monitoring Site-Specific Fermentation Outcomes via Oxidation Reduction Potential and UV-Vis Spectroscopy to Characterize “Hidden” Parameters of Pinot Noir Wine Fermentations"
 collection: publications
-permalink: /publication/2010-10-01-paper-title-number-2
+permalink: /publication/molecules-2021
 excerpt: 'Real-time process metrics are standard for the majority of fermentation-based industries but have not been widely adopted by the wine industry. In this study, replicate fermentations were conducted with temperature as the main process parameter and assessed via in-line Oxidation Reduction Potential (ORP) probes and at-line profiling of phenolics compounds by UV-Vis spectroscopy...'
 date: 2021-08-05
 venue: 'Molecules'

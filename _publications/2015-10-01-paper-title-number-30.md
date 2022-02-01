@@ -1,7 +1,7 @@
 ---
 title: "Extracellular electron transfer increases fermentation in lactic acid bacteria via a hybrid metabolism"
 collection: publications
-permalink: /publication/2015-10-01-paper-title-number-3
+permalink: /publication/bioRxiv-2021
 excerpt: 'The discovery of a single pathway that blends features of fermentation and respiration expands our knowledge of energy conservation metabolism and provides immediate biotechnology applications.'
 date: 2021-5-26
 venue: 'bioRxiv'

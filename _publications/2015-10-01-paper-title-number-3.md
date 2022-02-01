@@ -1,7 +1,7 @@
 ---
 title: "Wireless Sensor Network with Mesh Topology for Carbon Dioxide Monitoring in a Winery"
 collection: publications
-permalink: /publication/2015-10-01-paper-title-number-3
+permalink: /publication/IEEE-RWW-2021
 excerpt: 'Existing CO2 monitoring devices for wineries typically consist of a single sensor mounted on the wall, providing only a point measurement, however, the spatial dependency of CO2 lends itself to a multi-sensor system...'
 date: 2021-1-17
 venue: 'IEEE Topical Conference on Wireless Sensors and Sensor Networks (WiSNeT)'

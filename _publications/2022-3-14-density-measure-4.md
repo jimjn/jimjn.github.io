@@ -3,7 +3,7 @@ title: "Automated Density Measurement with Real-Time Predictive Modeling of Wine
 collection: publications
 permalink: /publication/TIM-2022
 excerpt: 'Wine fermentation is traditionally monitored through manual measurements of density, however, such measurements become labor intensive as the number of fermentations increases...'
-date: 2022-3-22
+date: 2022-06-21
 venue: 'IEEE Transactions on Instrumentation and Measurement'
 #paperurl: 'https://www.biorxiv.org/content/10.1101/2021.05.26.445846v1'
 citation: J. Nelson, R. Boulton, and A. Knoesen, “Automated Density Measurement with Real-Time Predictive Modeling of Wine Fermentations,” IEEE Trans. Instrum. Meas., pp. 1–1, 2022, doi: 10.1109/TIM.2022.3162289.
